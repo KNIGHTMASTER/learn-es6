@@ -1,0 +1,46 @@
+<script>
+    const fruits = [
+        {
+            id: 1,
+            name: "Banana",
+            price: 10000
+        },
+        {
+            id: 2,
+            name: "Pineapple",
+            price: 20000
+        },
+        {
+            id: 3,
+            name: "Avocado",
+            price: 30000
+        },
+        {
+            id: 4,
+            name: "Avocado",
+            price: 35000
+        }
+    ]
+
+    // using arrow function
+    const fruitNames = fruits.map(fruit => fruit.name)
+    console.log(fruitNames)
+
+    // not using arrow function
+    const fruitNames2 = fruits.map(function (fruit) {
+        return fruit.name
+    })
+    console.log(fruitNames2)
+
+    // filtering
+    const avocado = fruits.filter(fruit => fruit.name === "Avocado")
+    console.log(avocado)
+
+    // finding
+    const banana = fruits.find(fruit => fruit.name === "Banana")
+    console.log(banana)
+
+    // reduce
+    const totalPrice = fruits.reduce((total, fruit) => total + fruit.price, 0)
+    console.log(`Total Price : ${totalPrice}`)
+</script>
