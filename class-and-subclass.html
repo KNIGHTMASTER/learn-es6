@@ -1,0 +1,26 @@
+<script>
+    class Person {
+        constructor(firstName, lastName) {
+            this.firstName = firstName
+            this.lastName = lastName
+        }
+
+        greet() {
+            return `Hello my name is ${this.firstName} ${this.lastName}`
+        }
+    }
+
+    class Member extends Person {
+        constructor(firstName, lastName, memberId) {
+            super(firstName, lastName)
+            this.memberId = memberId
+        }
+    }
+
+    const john = new Person("John", "Doe")
+    console.log(`John's Name : ${john.firstName} ${john.lastName}`)
+    console.log(john.greet())
+
+    const member = new Member("John", "Doe", 31)
+    console.log(`John's member id : ${member.memberId}`)
+</script>
