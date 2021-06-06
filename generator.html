@@ -1,0 +1,18 @@
+<script>
+    function* generator() {
+        yield 1;
+        yield 2;
+        yield 3;
+
+        return 4;
+    }
+
+    const gen = generator()
+    let currentGen
+    do {
+        currentGen = gen.next()
+        console.log(`Gen value : ${currentGen.value} - Is Done : ${currentGen.done}`)
+    }
+    while (currentGen.done === false)
+
+</script>
